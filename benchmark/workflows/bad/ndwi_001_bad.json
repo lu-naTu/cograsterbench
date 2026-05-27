@@ -1,0 +1,17 @@
+{
+  "workflow_id": "ndwi_001_bad",
+  "operations": [
+    {
+      "layer": "green",
+      "operation": "read_band"
+    },
+    {
+      "layer": "nir",
+      "operation": "read_band"
+    }
+  ],
+  "formula": "(NIR - Green) / (NIR + Green)",
+  "checks": [
+    "same_crs"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "task_id": "ndwi_001",
+  "domain": "spectral_indices",
+  "user_query": "Compute NDWI from green and near-infrared bands.",
+  "error_traps": [
+    "index_semantics_error",
+    "physical_plausibility_error",
+    "grid_alignment_error",
+    "nodata_semantic_error"
+  ],
+  "expected_formula": "(Green - NIR) / (Green + NIR)",
+  "expected_operations": [
+    {
+      "layer": "green",
+      "operation": "read_band"
+    },
+    {
+      "layer": "nir",
+      "operation": "read_band"
+    }
+  ],
+  "forbidden_operations": [],
+  "required_checks": [
+    "same_crs",
+    "same_transform",
+    "same_resolution",
+    "nodata_preserved",
+    "output_range_-1_1"
+  ]
+}

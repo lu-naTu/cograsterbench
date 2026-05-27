@@ -1,0 +1,29 @@
+{
+  "task_id": "ndvi_001",
+  "domain": "spectral_indices",
+  "user_query": "Compute NDVI from red and near-infrared bands.",
+  "error_traps": [
+    "index_semantics_error",
+    "physical_plausibility_error",
+    "nodata_semantic_error"
+  ],
+  "expected_formula": "(NIR - Red) / (NIR + Red)",
+  "expected_operations": [
+    {
+      "layer": "red",
+      "operation": "read_band"
+    },
+    {
+      "layer": "nir",
+      "operation": "read_band"
+    }
+  ],
+  "forbidden_operations": [],
+  "required_checks": [
+    "same_crs",
+    "same_transform",
+    "same_resolution",
+    "nodata_preserved",
+    "output_range_-1_1"
+  ]
+}

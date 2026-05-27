@@ -1,0 +1,31 @@
+{
+  "workflow_id": "solar_001_good",
+  "operations": [
+    {
+      "layer": "solar_radiation",
+      "operation": "normalize"
+    },
+    {
+      "layer": "slope",
+      "operation": "inverse_normalize"
+    },
+    {
+      "layer": "distance_to_roads",
+      "operation": "inverse_normalize"
+    },
+    {
+      "layer": "land_cover",
+      "operation": "reclassify"
+    },
+    {
+      "layer": "protected_areas",
+      "operation": "mask"
+    }
+  ],
+  "checks": [
+    "same_crs",
+    "same_transform",
+    "same_resolution",
+    "nodata_preserved"
+  ]
+}

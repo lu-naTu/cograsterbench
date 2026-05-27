@@ -1,0 +1,29 @@
+{
+  "workflow_id": "solar_002_bad",
+  "operations": [
+    {
+      "layer": "solar_radiation",
+      "operation": "normalize"
+    },
+    {
+      "layer": "slope",
+      "operation": "normalize"
+    },
+    {
+      "layer": "distance_to_power_lines",
+      "operation": "normalize"
+    },
+    {
+      "layer": "cloud_mask",
+      "operation": "weighted_sum"
+    },
+    {
+      "layer": "land_cover",
+      "operation": "min_max_normalize"
+    }
+  ],
+  "checks": [
+    "same_crs",
+    "same_shape"
+  ]
+}

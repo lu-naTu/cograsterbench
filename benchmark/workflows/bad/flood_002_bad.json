@@ -1,0 +1,29 @@
+{
+  "workflow_id": "flood_002_bad",
+  "operations": [
+    {
+      "layer": "elevation",
+      "operation": "normalize"
+    },
+    {
+      "layer": "slope",
+      "operation": "inverse_normalize"
+    },
+    {
+      "layer": "distance_to_river",
+      "operation": "normalize"
+    },
+    {
+      "layer": "rainfall",
+      "operation": "normalize"
+    },
+    {
+      "layer": "protected_areas",
+      "operation": "weighted_sum"
+    }
+  ],
+  "checks": [
+    "same_crs",
+    "same_shape"
+  ]
+}

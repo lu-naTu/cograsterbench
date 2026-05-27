@@ -1,0 +1,9 @@
+{
+  "task_id": "ndwi_001",
+  "domain": "spectral_indices",
+  "user_query": "Compute NDWI from green and near-infrared bands.",
+  "available_layers": [
+    "green",
+    "nir"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "workflow_id": "flood_002_good",
+  "operations": [
+    {
+      "layer": "elevation",
+      "operation": "inverse_normalize"
+    },
+    {
+      "layer": "slope",
+      "operation": "inverse_normalize"
+    },
+    {
+      "layer": "distance_to_river",
+      "operation": "inverse_normalize"
+    },
+    {
+      "layer": "rainfall",
+      "operation": "normalize"
+    },
+    {
+      "layer": "protected_areas",
+      "operation": "mask"
+    }
+  ],
+  "checks": [
+    "same_crs",
+    "same_transform",
+    "same_resolution",
+    "unit_consistency",
+    "nodata_preserved"
+  ]
+}

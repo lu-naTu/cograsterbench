@@ -1,0 +1,47 @@
+{
+  "task_id": "flood_002",
+  "domain": "flood_susceptibility",
+  "user_query": "Create a flood susceptibility map using elevation, slope, distance to river, rainfall, and protected areas.",
+  "error_traps": [
+    "factor_direction_error",
+    "constraint_factor_confusion",
+    "grid_alignment_error",
+    "unit_confusion",
+    "nodata_semantic_error"
+  ],
+  "expected_operations": [
+    {
+      "layer": "elevation",
+      "operation": "inverse_normalize"
+    },
+    {
+      "layer": "slope",
+      "operation": "inverse_normalize"
+    },
+    {
+      "layer": "distance_to_river",
+      "operation": "inverse_normalize"
+    },
+    {
+      "layer": "rainfall",
+      "operation": "normalize"
+    },
+    {
+      "layer": "protected_areas",
+      "operation": "mask"
+    }
+  ],
+  "forbidden_operations": [
+    {
+      "layer": "protected_areas",
+      "operation": "weighted_sum"
+    }
+  ],
+  "required_checks": [
+    "same_crs",
+    "same_transform",
+    "same_resolution",
+    "unit_consistency",
+    "nodata_preserved"
+  ]
+}

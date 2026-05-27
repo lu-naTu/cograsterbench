@@ -1,0 +1,28 @@
+{
+  "workflow_id": "solar_001_bad",
+  "operations": [
+    {
+      "layer": "solar_radiation",
+      "operation": "normalize"
+    },
+    {
+      "layer": "slope",
+      "operation": "normalize"
+    },
+    {
+      "layer": "distance_to_roads",
+      "operation": "inverse_normalize"
+    },
+    {
+      "layer": "land_cover",
+      "operation": "min_max_normalize"
+    },
+    {
+      "layer": "protected_areas",
+      "operation": "weighted_sum"
+    }
+  ],
+  "checks": [
+    "same_crs"
+  ]
+}

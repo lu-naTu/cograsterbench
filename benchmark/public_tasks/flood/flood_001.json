@@ -1,0 +1,11 @@
+{
+  "task_id": "flood_001",
+  "domain": "flood_susceptibility",
+  "user_query": "Create a flood susceptibility map using elevation, slope, distance to river, and land cover.",
+  "available_layers": [
+    "elevation",
+    "slope",
+    "distance_to_river",
+    "land_cover"
+  ]
+}

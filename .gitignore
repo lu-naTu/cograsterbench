@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Environments
+.venv/
+venv/
+
+# IDE / OS
+.vscode/
+.DS_Store
+__MACOSX/
+._*
+
+# Local outputs
+runs/
+outputs/
+*.tif
+*.tiff

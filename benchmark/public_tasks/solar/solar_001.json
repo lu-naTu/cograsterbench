@@ -1,0 +1,12 @@
+{
+  "task_id": "solar_001",
+  "domain": "solar_suitability_mapping",
+  "user_query": "Find suitable areas for a solar farm using solar radiation, slope, roads, land cover, and protected areas.",
+  "available_layers": [
+    "solar_radiation",
+    "slope",
+    "distance_to_roads",
+    "land_cover",
+    "protected_areas"
+  ]
+}

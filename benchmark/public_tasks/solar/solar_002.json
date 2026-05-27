@@ -1,0 +1,12 @@
+{
+  "task_id": "solar_002",
+  "domain": "solar_suitability_mapping",
+  "user_query": "Find suitable areas for solar panels using solar radiation, slope, distance to power lines, cloud mask, and land cover.",
+  "available_layers": [
+    "solar_radiation",
+    "slope",
+    "distance_to_power_lines",
+    "cloud_mask",
+    "land_cover"
+  ]
+}

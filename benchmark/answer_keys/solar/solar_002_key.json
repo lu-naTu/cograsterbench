@@ -1,0 +1,48 @@
+{
+  "task_id": "solar_002",
+  "error_traps": [
+    "factor_direction_error",
+    "categorical_continuous_confusion",
+    "constraint_factor_confusion",
+    "grid_alignment_error",
+    "nodata_semantic_error"
+  ],
+  "expected_operations": [
+    {
+      "layer": "solar_radiation",
+      "operation": "normalize"
+    },
+    {
+      "layer": "slope",
+      "operation": "inverse_normalize"
+    },
+    {
+      "layer": "distance_to_power_lines",
+      "operation": "inverse_normalize"
+    },
+    {
+      "layer": "cloud_mask",
+      "operation": "mask"
+    },
+    {
+      "layer": "land_cover",
+      "operation": "reclassify"
+    }
+  ],
+  "forbidden_operations": [
+    {
+      "layer": "cloud_mask",
+      "operation": "weighted_sum"
+    },
+    {
+      "layer": "land_cover",
+      "operation": "min_max_normalize"
+    }
+  ],
+  "required_checks": [
+    "same_crs",
+    "same_transform",
+    "same_resolution",
+    "nodata_preserved"
+  ]
+}

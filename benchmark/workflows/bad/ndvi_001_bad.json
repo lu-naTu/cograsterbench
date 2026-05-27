@@ -1,0 +1,18 @@
+{
+  "workflow_id": "ndvi_001_bad",
+  "operations": [
+    {
+      "layer": "red",
+      "operation": "read_band"
+    },
+    {
+      "layer": "nir",
+      "operation": "read_band"
+    }
+  ],
+  "formula": "(Green - NIR) / (Green + NIR)",
+  "checks": [
+    "same_crs",
+    "same_transform"
+  ]
+}

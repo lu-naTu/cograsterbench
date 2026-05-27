@@ -1,0 +1,9 @@
+{
+  "task_id": "ndvi_001",
+  "domain": "spectral_indices",
+  "user_query": "Compute NDVI from red and near-infrared bands.",
+  "available_layers": [
+    "red",
+    "nir"
+  ]
+}

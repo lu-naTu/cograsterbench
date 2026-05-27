@@ -100,15 +100,3 @@ The LLM receives only the user query, output format, and allowed operation names
 ### Guided mode
 
 The LLM receives the same information plus explicit raster-reasoning rules. This mode is useful for the first proof of concept, but it is too explicit for a final evaluation.
-
-## Current status
-
-The project is a working MVP. It is useful for demonstrating the pipeline, but it is not yet a full evaluation framework.
-
-Main limitations:
-
-- small synthetic benchmark;
-- rule-based verification only;
-- no real raster execution;
-- guided prompt is too direct;
-- public task and answer key are not separated yet.

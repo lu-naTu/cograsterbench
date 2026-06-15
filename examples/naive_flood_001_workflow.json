@@ -1,0 +1,24 @@
+{
+  "workflow_id": "flood_susceptibility_workflow",
+  "operations": [
+    {
+      "layer": "elevation",
+      "operation": "normalize"
+    },
+    {
+      "layer": "slope",
+      "operation": "normalize"
+    },
+    {
+      "layer": "distance_to_river",
+      "operation": "normalize"
+    },
+    {
+      "layer": "land_cover",
+      "operation": "reclassify"
+    }
+  ],
+  "checks": [
+    "all_layers_covered"
+  ]
+}

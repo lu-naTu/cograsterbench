@@ -1,0 +1,57 @@
+{
+  "task_id": "flood_001",
+  "workflow_id": "flood_susceptibility_workflow",
+  "passed": false,
+  "cognitive_error_rate": 1.75,
+  "errors": [
+    {
+      "error_type": "E1_factor_direction_error",
+      "layer": "elevation",
+      "message": "Wrong operation for layer 'elevation': expected 'inverse_normalize', got 'normalize'.",
+      "expected": "inverse_normalize",
+      "actual": "normalize"
+    },
+    {
+      "error_type": "E1_factor_direction_error",
+      "layer": "slope",
+      "message": "Wrong operation for layer 'slope': expected 'inverse_normalize', got 'normalize'.",
+      "expected": "inverse_normalize",
+      "actual": "normalize"
+    },
+    {
+      "error_type": "E1_factor_direction_error",
+      "layer": "distance_to_river",
+      "message": "Wrong operation for layer 'distance_to_river': expected 'inverse_normalize', got 'normalize'.",
+      "expected": "inverse_normalize",
+      "actual": "normalize"
+    },
+    {
+      "error_type": "E4_nodata_semantic_error",
+      "layer": null,
+      "message": "Missing required check: 'nodata_preserved'.",
+      "expected": "nodata_preserved",
+      "actual": null
+    },
+    {
+      "error_type": "E0_missing_required_check",
+      "layer": null,
+      "message": "Missing required check: 'same_crs'.",
+      "expected": "same_crs",
+      "actual": null
+    },
+    {
+      "error_type": "E2_grid_alignment_error",
+      "layer": null,
+      "message": "Missing required check: 'same_resolution'.",
+      "expected": "same_resolution",
+      "actual": null
+    },
+    {
+      "error_type": "E2_grid_alignment_error",
+      "layer": null,
+      "message": "Missing required check: 'same_transform'.",
+      "expected": "same_transform",
+      "actual": null
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "task_id": "solar_004",
+  "error_traps": [
+    "treating cloud mask as a continuous factor",
+    "using slope with the wrong factor direction",
+    "using distance to road with the wrong factor direction",
+    "using distance to grid with the wrong factor direction",
+    "missing raster alignment checks"
+  ],
+  "expected_operations": [
+    {
+      "layer": "slope",
+      "operation": "inverse_normalize"
+    },
+    {
+      "layer": "distance_to_road",
+      "operation": "inverse_normalize"
+    },
+    {
+      "layer": "distance_to_grid",
+      "operation": "inverse_normalize"
+    },
+    {
+      "layer": "cloud_mask",
+      "operation": "mask"
+    }
+  ],
+  "forbidden_operations": [
+    {
+      "layer": "cloud_mask",
+      "operation": "normalize"
+    },
+    {
+      "layer": "cloud_mask",
+      "operation": "inverse_normalize"
+    }
+  ],
+  "required_checks": [
+    "same_crs",
+    "same_transform",
+    "same_resolution",
+    "nodata_preserved",
+    "unit_consistency"
+  ]
+}

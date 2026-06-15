@@ -1,0 +1,10 @@
+{
+  "task_id": "ndwi_002",
+  "domain": "spectral",
+  "user_query": "Compute NDWI from green and near-infrared bands and apply a cloud mask. The input bands should be read directly, not normalized as continuous factors.",
+  "available_layers": [
+    "green",
+    "nir",
+    "cloud_mask"
+  ]
+}

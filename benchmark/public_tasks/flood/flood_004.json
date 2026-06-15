@@ -1,0 +1,11 @@
+{
+  "task_id": "flood_004",
+  "domain": "flood",
+  "user_query": "Create a flood risk workflow using slope, rainfall, distance to river, and land cover. Land cover is categorical and should not be normalized as a continuous raster.",
+  "available_layers": [
+    "slope",
+    "rainfall",
+    "distance_to_river",
+    "land_cover"
+  ]
+}

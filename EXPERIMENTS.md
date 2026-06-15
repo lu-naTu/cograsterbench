@@ -147,3 +147,64 @@ Limitations:
 - The verifier is rule-based.
 - The system still checks workflow JSON rather than real GeoTIFF outputs.
 - The result should be treated as a controlled proof of concept, not as a final empirical claim.
+
+## Experiment 003: Expanded Benchmark
+
+Date: 2026-05-27
+
+Model:
+
+- llama3.2 via Ollama
+
+Benchmark:
+
+- 12 synthetic trap-based raster workflow tasks
+- domains: flood susceptibility, solar suitability, spectral indices
+- public task JSON is given to the LLM
+- hidden answer key JSON is used only by the verifier
+
+Compared modes:
+
+- naive
+- minimal
+- guided
+
+Results:
+
+| Task | Naive | Naive Errors | Minimal | Minimal Errors | Guided | Guided Errors |
+|---|---:|---:|---:|---:|---:|---:|
+| flood_001 | false | 7 | false | 6 | true | 0 |
+| flood_002 | false | 9 | false | 8 | true | 0 |
+| solar_001 | false | 5 | false | 5 | true | 0 |
+| solar_002 | false | 5 | false | 5 | true | 0 |
+| ndvi_001 | false | 6 | false | 6 | true | 0 |
+| ndwi_001 | false | 8 | false | 6 | true | 0 |
+| flood_003 | false | 8 | false | 8 | true | 0 |
+| flood_004 | false | 7 | false | 8 | true | 0 |
+| solar_003 | false | 6 | false | 6 | true | 0 |
+| solar_004 | false | 9 | false | 9 | true | 0 |
+| ndvi_002 | false | 6 | false | 6 | true | 0 |
+| ndwi_002 | false | 6 | false | 6 | true | 0 |
+
+Summary:
+
+| Mode | Passed |
+|---|---:|
+| Naive | 0 / 12 |
+| Minimal | 0 / 12 |
+| Guided | 12 / 12 |
+
+Interpretation:
+
+The benchmark was expanded from 6 to 12 synthetic raster workflow tasks while keeping the public task / hidden answer key setup. Naive and minimal prompting still failed all tasks, while guided prompting passed all 12 tasks.
+
+This supports the current working hypothesis: general-purpose LLM prompting is insufficient for semantically correct raster workflow construction, while explicit raster-specific reasoning rules can substantially reduce semantic errors in this controlled benchmark.
+
+Limitations:
+
+- The benchmark is still synthetic.
+- The task set is still small.
+- The guided prompt contains explicit domain rules.
+- The verifier is rule-based.
+- The current evaluation checks workflow JSON, not executed raster outputs.
+- The result should be interpreted as a proof of concept, not as a final empirical evaluation.

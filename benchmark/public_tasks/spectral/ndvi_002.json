@@ -1,0 +1,10 @@
+{
+  "task_id": "ndvi_002",
+  "domain": "spectral",
+  "user_query": "Compute NDVI from red and near-infrared bands and apply a cloud mask. The spectral bands should be read directly, not normalized as suitability factors.",
+  "available_layers": [
+    "red",
+    "nir",
+    "cloud_mask"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "task_id": "flood_003",
+  "domain": "flood",
+  "user_query": "Create a flood susceptibility workflow using elevation, rainfall, distance to river, and protected areas. Protected areas must be treated as a hard exclusion mask.",
+  "available_layers": [
+    "elevation",
+    "rainfall",
+    "distance_to_river",
+    "protected_areas"
+  ]
+}

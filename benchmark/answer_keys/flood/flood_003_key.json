@@ -1,0 +1,45 @@
+{
+  "task_id": "flood_003",
+  "error_traps": [
+    "treating protected areas as a weighted factor",
+    "using elevation with the wrong factor direction",
+    "using distance to river with the wrong factor direction",
+    "missing raster alignment checks",
+    "missing NoData preservation check"
+  ],
+  "expected_operations": [
+    {
+      "layer": "elevation",
+      "operation": "inverse_normalize"
+    },
+    {
+      "layer": "rainfall",
+      "operation": "normalize"
+    },
+    {
+      "layer": "distance_to_river",
+      "operation": "inverse_normalize"
+    },
+    {
+      "layer": "protected_areas",
+      "operation": "mask"
+    }
+  ],
+  "forbidden_operations": [
+    {
+      "layer": "protected_areas",
+      "operation": "normalize"
+    },
+    {
+      "layer": "protected_areas",
+      "operation": "inverse_normalize"
+    }
+  ],
+  "required_checks": [
+    "same_crs",
+    "same_transform",
+    "same_resolution",
+    "nodata_preserved",
+    "unit_consistency"
+  ]
+}

@@ -37,6 +37,36 @@ TASKS = [
         "benchmark/public_tasks/spectral/ndwi_001.json",
         "benchmark/answer_keys/spectral/ndwi_001_key.json",
     ),
+        (
+        "flood_003",
+        "benchmark/public_tasks/flood/flood_003.json",
+        "benchmark/answer_keys/flood/flood_003_key.json",
+    ),
+    (
+        "flood_004",
+        "benchmark/public_tasks/flood/flood_004.json",
+        "benchmark/answer_keys/flood/flood_004_key.json",
+    ),
+    (
+        "solar_003",
+        "benchmark/public_tasks/solar/solar_003.json",
+        "benchmark/answer_keys/solar/solar_003_key.json",
+    ),
+    (
+        "solar_004",
+        "benchmark/public_tasks/solar/solar_004.json",
+        "benchmark/answer_keys/solar/solar_004_key.json",
+    ),
+    (
+        "ndvi_002",
+        "benchmark/public_tasks/spectral/ndvi_002.json",
+        "benchmark/answer_keys/spectral/ndvi_002_key.json",
+    ),
+    (
+        "ndwi_002",
+        "benchmark/public_tasks/spectral/ndwi_002.json",
+        "benchmark/answer_keys/spectral/ndwi_002_key.json",
+    ),
 ]
 
 

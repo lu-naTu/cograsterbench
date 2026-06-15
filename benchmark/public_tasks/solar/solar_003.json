@@ -1,0 +1,11 @@
+{
+  "task_id": "solar_003",
+  "domain": "solar",
+  "user_query": "Create a solar farm suitability workflow using slope, distance to grid, land cover, and protected areas. Protected areas must be excluded as a hard constraint.",
+  "available_layers": [
+    "slope",
+    "distance_to_grid",
+    "land_cover",
+    "protected_areas"
+  ]
+}

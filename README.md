@@ -8,7 +8,7 @@ At this stage the repository is a proof of concept. It does not process real Geo
 
 ## What is implemented
 
-- six synthetic benchmark tasks;
+- 12 synthetic benchmark tasks;
 - reference good and bad workflows;
 - a rule-based semantic verifier;
 - a small CLI for checking one task/workflow pair;
@@ -121,6 +121,19 @@ This repository is intentionally small and should not be presented as a finished
 - No real GeoTIFF execution is implemented yet.
 - The guided prompt currently contains explicit raster-reasoning rules.
 - The current experiment is useful as a sanity check, not as a strong empirical claim.
+
+## Examples
+
+Concrete examples of LLM-generated workflows and verifier reports are available in the `examples/` folder.
+
+The folder includes:
+
+- a naive LLM workflow that fails semantic verification;
+- the corresponding verifier report with detected error types;
+- a guided LLM workflow that passes verification;
+- the corresponding verifier report.
+
+These examples make the benchmark results more transparent by showing not only aggregate scores, but also individual generated workflows and detected semantic errors.
 
 ## Next steps
 

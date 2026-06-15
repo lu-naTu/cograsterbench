@@ -1,0 +1,49 @@
+{
+  "task_id": "solar_003",
+  "error_traps": [
+    "treating protected areas as a weighted suitability factor",
+    "normalizing categorical land cover",
+    "using slope with the wrong factor direction",
+    "using distance to grid with the wrong factor direction",
+    "missing raster alignment checks"
+  ],
+  "expected_operations": [
+    {
+      "layer": "slope",
+      "operation": "inverse_normalize"
+    },
+    {
+      "layer": "distance_to_grid",
+      "operation": "inverse_normalize"
+    },
+    {
+      "layer": "land_cover",
+      "operation": "reclassify"
+    },
+    {
+      "layer": "protected_areas",
+      "operation": "mask"
+    }
+  ],
+  "forbidden_operations": [
+    {
+      "layer": "protected_areas",
+      "operation": "normalize"
+    },
+    {
+      "layer": "protected_areas",
+      "operation": "inverse_normalize"
+    },
+    {
+      "layer": "land_cover",
+      "operation": "normalize"
+    }
+  ],
+  "required_checks": [
+    "same_crs",
+    "same_transform",
+    "same_resolution",
+    "nodata_preserved",
+    "unit_consistency"
+  ]
+}

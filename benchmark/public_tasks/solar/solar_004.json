@@ -1,0 +1,11 @@
+{
+  "task_id": "solar_004",
+  "domain": "solar",
+  "user_query": "Create a solar suitability workflow using slope, distance to road, distance to grid, and cloud mask. Cloud mask must be used as a hard mask, not as a weighted factor.",
+  "available_layers": [
+    "slope",
+    "distance_to_road",
+    "distance_to_grid",
+    "cloud_mask"
+  ]
+}

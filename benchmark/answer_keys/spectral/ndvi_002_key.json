@@ -1,0 +1,45 @@
+{
+  "task_id": "ndvi_002",
+  "error_traps": [
+    "normalizing spectral bands before computing NDVI",
+    "using the wrong NDVI formula",
+    "treating cloud mask as a weighted factor",
+    "missing output range check"
+  ],
+  "expected_operations": [
+    {
+      "layer": "red",
+      "operation": "read_band"
+    },
+    {
+      "layer": "nir",
+      "operation": "read_band"
+    },
+    {
+      "layer": "cloud_mask",
+      "operation": "mask"
+    }
+  ],
+  "forbidden_operations": [
+    {
+      "layer": "red",
+      "operation": "normalize"
+    },
+    {
+      "layer": "nir",
+      "operation": "normalize"
+    },
+    {
+      "layer": "cloud_mask",
+      "operation": "normalize"
+    }
+  ],
+  "required_checks": [
+    "same_crs",
+    "same_transform",
+    "same_resolution",
+    "nodata_preserved",
+    "output_range_-1_1"
+  ],
+  "expected_formula": "(NIR - Red) / (NIR + Red)"
+}

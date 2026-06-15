@@ -1,0 +1,50 @@
+{
+  "task_id": "ndvi_001",
+  "workflow_id": "ndvi_workflow",
+  "passed": false,
+  "cognitive_error_rate": 2.0,
+  "errors": [
+    {
+      "error_type": "E4_nodata_semantic_error",
+      "layer": null,
+      "message": "Missing required check: 'nodata_preserved'.",
+      "expected": "nodata_preserved",
+      "actual": null
+    },
+    {
+      "error_type": "E0_missing_required_check",
+      "layer": null,
+      "message": "Missing required check: 'output_range_-1_1'.",
+      "expected": "output_range_-1_1",
+      "actual": null
+    },
+    {
+      "error_type": "E0_missing_required_check",
+      "layer": null,
+      "message": "Missing required check: 'same_crs'.",
+      "expected": "same_crs",
+      "actual": null
+    },
+    {
+      "error_type": "E2_grid_alignment_error",
+      "layer": null,
+      "message": "Missing required check: 'same_resolution'.",
+      "expected": "same_resolution",
+      "actual": null
+    },
+    {
+      "error_type": "E2_grid_alignment_error",
+      "layer": null,
+      "message": "Missing required check: 'same_transform'.",
+      "expected": "same_transform",
+      "actual": null
+    },
+    {
+      "error_type": "E7_index_semantics_error",
+      "layer": null,
+      "message": "Wrong spectral index formula: expected '(NIR - Red) / (NIR + Red)', got 'None'.",
+      "expected": "(NIR - Red) / (NIR + Red)",
+      "actual": null
+    }
+  ]
+}

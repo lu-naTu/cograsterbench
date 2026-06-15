@@ -1,0 +1,14 @@
+{
+  "workflow_id": "ndvi_workflow",
+  "operations": [
+    {
+      "layer": "red",
+      "operation": "read_band"
+    },
+    {
+      "layer": "nir",
+      "operation": "read_band"
+    }
+  ],
+  "checks": []
+}

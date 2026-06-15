@@ -143,3 +143,23 @@ The most important next methodological step is to separate benchmark files into:
 - answer keys, visible only to the verifier.
 
 After that, the benchmark can be expanded and the experiment can compare naive, minimal, guided, and repair settings more fairly.
+
+## Current status
+
+The current benchmark contains 12 synthetic raster workflow tasks across three domains:
+
+- flood susceptibility;
+- solar suitability;
+- spectral indices.
+
+Current result:
+
+| Mode | Passed |
+|---|---:|
+| Naive | 0 / 12 |
+| Minimal | 0 / 12 |
+| Guided | 12 / 12 |
+
+The evaluation uses strict pass/fail scoring. Failed workflows may still be syntactically valid or partially plausible, but they contain at least one verifier-detected semantic error.
+
+Selected examples of LLM outputs and verifier reports are available in the `examples/` folder.
